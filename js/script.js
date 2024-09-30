@@ -1,15 +1,16 @@
-// Selecionando o DIV pelo ID
-let meuDiv = document.getElementById('meuDiv');
-console.log(meuDiv);
+//Funções para os eventos
+function aoClicar(){
+    alert('Você clicou no botão!');
+}
 
-// Selecionando todos os parágrafos com a classe "paragrafo"
-let paragrafos = document.getElementsByClassName('paragrafo');
-console.log(paragrafos);
+function aoPerderFoco(){
+    alert('Você saiu do campo!');
+}
 
-// Selecionando o primeiro parágrafo com a classe "paragrafo"
-let primeiroParagrafo = document.querySelector('.paragrafo');
-console.log(primeiroParagrafo);
+// Selecionando o elemento usando querySelector
+let campo = document.querySelector('#meuCampo');
+let botao = document.querySelector('.btnCampo');
 
-// Selecionando todos os parágrafos dentro do div
-let paragrafosDentroDiv = document.querySelectorAll('#meuDiv p');
-console.log(paragrafosDentroDiv);
+//Adicionando os eventos
+campo.addEventListener('blur', aoPerderFoco);
+botao.addEventListener('click', aoClicar);
