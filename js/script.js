@@ -1,16 +1,8 @@
-//Funções para os eventos
-function aoClicar(){
-    alert('Você clicou no botão!');
+function aoClicar() {
+    let campo = document.querySelector('#meuCampo');
+    let valorDigitado = campo.value;
+    alert('Você clicou! e tá escrito "' + valorDigitado + '"');
 }
 
-function aoPerderFoco(){
-    alert('Você saiu do campo!');
-}
-
-// Selecionando o elemento usando querySelector
-let campo = document.querySelector('#meuCampo');
-let botao = document.querySelector('.btnCampo');
-
-//Adicionando os eventos
-campo.addEventListener('blur', aoPerderFoco);
+let botao = document.querySelector('.btnExibaValor');
 botao.addEventListener('click', aoClicar);
