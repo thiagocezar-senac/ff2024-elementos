@@ -1,15 +1,30 @@
 function aoClicar() {
-    let capturaNumberOne = document.querySelector('#numberOne');
-    let capturaNumberTwo = document.querySelector('#numberTwo');
-    let numberOne = capturaNumberOne.value;
-    let numberTwo = capturaNumberTwo.value;
-    let soma = parseInt(numberOne) + parseInt(numberTwo);
+    let getNumber = document.querySelector('#number');
+    let number = getNumber.value;
 
-    pResultado = document.querySelector('#resultado');
+    if (number == 1) {
+        alert('' + number + ': Domingo!');
 
-    pResultado.innerHTML = `${parseInt(numberOne)} + ${parseInt(numberTwo)} = ${soma}`
+    } else if (number == 2) {
+        alert('' + number + ': Segunda-feira!');
 
-    alert('Soma: "' + soma + '"');
+    } else if (number == 3) {
+        alert('' + number + ': Terça-feira!');
+
+    } else if (number == 4) {
+        alert('' + number + ': Quarta-feira!');
+
+    } else if (number == 5) {
+        alert('' + number + ': Quinta-feira!');
+
+    } else if (number == 6) {
+        alert('' + number + ': Sexta-feira!');
+
+    } else if (number == 7) {
+        alert('' + number + ': Sábado!');
+    }
+
+    // Tem como melhorar utilizando While, estudar essa possibilidade.
 }
 
 let botao = document.querySelector('.btnExibaValor');
