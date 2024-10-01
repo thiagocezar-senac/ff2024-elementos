@@ -5,6 +5,5 @@ function aoClicar() {
     let idadeReal = year - valorDigitado;
     alert('Sua idade é: "' + idadeReal + '"');
 }
-
 let botao = document.querySelector('.btnExibaValor');
 botao.addEventListener('click', aoClicar);
