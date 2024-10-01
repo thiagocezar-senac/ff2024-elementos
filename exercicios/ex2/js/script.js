@@ -3,7 +3,12 @@ function aoClicar() {
     let capturaNumberTwo = document.querySelector('#numberTwo');
     let numberOne = capturaNumberOne.value;
     let numberTwo = capturaNumberTwo.value;
-    var soma = parseInt(numberOne) + parseInt(numberTwo);
+    let soma = parseInt(numberOne) + parseInt(numberTwo);
+
+    pResultado = document.querySelector('#resultado');
+
+    pResultado.innerHTML = `${parseInt(numberOne)} + ${parseInt(numberTwo)} = ${soma}`
+
     alert('Soma: "' + soma + '"');
 }
 
