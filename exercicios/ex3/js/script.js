@@ -1,15 +1,23 @@
 function aoClicar() {
-    let capturaNumberOne = document.querySelector('#numberOne');
-    let capturaNumberTwo = document.querySelector('#numberTwo');
-    let numberOne = capturaNumberOne.value;
-    let numberTwo = capturaNumberTwo.value;
-    let soma = parseInt(numberOne) + parseInt(numberTwo);
+    let getGradeOne = document.querySelector('#gradeOne');
+    let getGradeTwo = document.querySelector('#gradeTwo');
+    let gradeOne = getGradeOne.value;
+    let gradeTwo = getGradeTwo.value;
+    let somaNotas = parseInt(gradeOne) + parseInt(gradeTwo);
+    let mediaNotas = parseInt(somaNotas) / 2;
 
-    pResultado = document.querySelector('#resultado');
+    console.log(mediaNotas);
 
-    pResultado.innerHTML = `${parseInt(numberOne)} + ${parseInt(numberTwo)} = ${soma}`
+    if (mediaNotas >= 7) {
+        alert('Você foi aprovado, parabéns! Nota: ' + mediaNotas + '');
 
-    alert('Soma: "' + soma + '"');
+    } else if (mediaNotas < 5) {
+        alert('Infelizmente você foi reprovado! Nota: ' + mediaNotas + '');
+
+    } else if (mediaNotas >= 5 && mediaNotas <= 6) {
+        alert('Você está de recuperação! Nota: ' + mediaNotas + '');
+    }
+
 }
 
 let botao = document.querySelector('.btnExibaValor');
