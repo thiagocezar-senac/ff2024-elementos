@@ -1,15 +1,28 @@
 function aoClicar() {
     let capturaNumberOne = document.querySelector('#numberOne');
     let capturaNumberTwo = document.querySelector('#numberTwo');
+    let capturaNumberThree = document.querySelector('#numberThree');
     let numberOne = capturaNumberOne.value;
     let numberTwo = capturaNumberTwo.value;
-    let soma = parseInt(numberOne) + parseInt(numberTwo);
+    let numberThree = capturaNumberThree.value;
+    let numberOneInt = parseInt(numberOne);
+    let numberTwoInt = parseInt(numberTwo);
+    let numberThreeInt = parseInt(numberThree);
+    let maior = numberOneInt;
 
-    pResultado = document.querySelector('#resultado');
+    if (numberTwoInt > maior) {
+        maior = numberTwoInt;
+    }
 
-    pResultado.innerHTML = `${parseInt(numberOne)} + ${parseInt(numberTwo)} = ${soma}`
+    if (numberThreeInt > maior) {
+        maior = numberThreeInt;
+    }
 
-    alert('Soma: "' + soma + '"');
+    if (numberTwoInt > numberThreeInt) {
+        maior = numberTwoInt;
+    }
+
+    alert('' + maior + ': É o maior entre os três!');
 }
 
 let botao = document.querySelector('.btnExibaValor');
