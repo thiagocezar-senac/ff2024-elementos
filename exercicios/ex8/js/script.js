@@ -1,15 +1,20 @@
 function aoClicar() {
-    let capturaNumberOne = document.querySelector('#numberOne');
-    let capturaNumberTwo = document.querySelector('#numberTwo');
-    let numberOne = capturaNumberOne.value;
-    let numberTwo = capturaNumberTwo.value;
-    let soma = parseInt(numberOne) + parseInt(numberTwo);
+    let capturarNome = document.querySelector('#name');
+    let nome = capturarNome.value;
 
-    pResultado = document.querySelector('#resultado');
+    let capturarValorHora = document.querySelector('#valueHour');
+    let valorHora = capturarValorHora.value;
+    let valorHoraInt = parseInt(valorHora);
 
-    pResultado.innerHTML = `${parseInt(numberOne)} + ${parseInt(numberTwo)} = ${soma}`
+    let capturarHorasTrabalhadas = document.querySelector('#jobHourMounth');
+    let horasTrabalhadas = capturarHorasTrabalhadas.value;
+    let horasTrabalhadasInt = parseInt(horasTrabalhadas);
 
-    alert('Soma: "' + soma + '"');
+    let valorTotal = valorHoraInt * horasTrabalhadasInt;
+    let valorTotalFloat = parseFloat(valorTotal);
+
+    alert('' + nome + ', seu salário esse mês será: ' + valorTotalFloat + '');
+
 }
 
 let botao = document.querySelector('.btnExibaValor');
